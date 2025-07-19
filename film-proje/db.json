@@ -1,0 +1,148 @@
+{
+   "movies": [
+      {
+         "id": 1,
+         "title": "Mother!",
+         "plot": "A couple's relationship is tested when uninvited guests arrive at their home, disrupting their tranquil existence.",
+         "imdb": 6.6,
+         "trailer": "https://www.youtube.com/embed/XpICoc65uh0",
+         "time": 121,
+         "year": 2017,
+         "genres": ["Psychological Drama", "Psychological Horror", "Drama", "Horror", "Mystery"],
+         "director": "Darren Aronofsky",
+         "actors": ["Jennifer Lawrence", "Javier Bardem", "Ed Harris"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BMzc5ODExODE0MV5BMl5BanBnXkFtZTgwNDkzNDUxMzI@._V1_FMjpg_UY2048_.jpg"
+      },
+      {
+         "id": 2,
+         "title": "The Imitation Game",
+         "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.",
+         "imdb": 8.0,
+         "trailer": "https://www.youtube.com/embed/nuPZUUED5uk",
+         "time": 114,
+         "year": 2014,
+         "genres": ["Period Drama", "Psychological Drama", "Tragedy", "Biography", "Drama", "Thriller", "War"],
+         "director": "Morten Tyldum",
+         "actors": ["Benedict Cumberbatch", "Keira Knightley", "Matthew Goode"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_FMjpg_UY2048_.jpg"
+      },
+      {
+         "id": 3,
+         "title": "For Love or Money",
+         "plot": "Doug, a concierge at a luxury Manhattan hotel, saves all his tips toward his plan for a hotel. A potential investor seduces the girl Doug loves with false promises of leaving his wife. Doug's dilemma: hotel project or girl?",
+         "imdb": 6.2,
+         "trailer": "https://www.youtube.com/embed/IfQU502ZZq0",
+         "time": 96,
+         "year": 1993,
+         "genres": ["Feel-Good Romance", "Romantic Comedy", "Comedy", "Romance", "Drama"],
+         "director": "Barry Sonnenfeld",
+         "actors": ["Michael J. Fox", "Gabrielle Anwar", "Anthony Higgins"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BYjY0ODM4NDYtMDMyZi00OTk2LWFiNDItNWU0ZTM4NGMyMjJiXkEyXkFqcGc@._V1_FMjpg_UX940_.jpg"
+      },
+      {
+         "id": 4,
+         "title": "Down a Dark Hall",
+         "plot": "A troubled teen named Kit Gordy is forced to join the exclusive Blackwood Boarding School, just to find herself trapped by dark forces around its mysterious headmistress, Madame Duret.",
+         "imdb": 5.0,
+         "trailer": "https://www.youtube.com/embed/TwHoY2dVZLE",
+         "time": 96,
+         "year": 2018,
+         "genres": ["Fantasy", "Horror", "Mystery", "Thriller", "Drama"],
+         "director": "Rodrigo Cortés",
+         "actors": ["AnnaSophia Robb", "Uma Thurman", "Isabelle Fuhrman"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BMTY4ODg5MjMwNl5BMl5BanBnXkFtZTgwMDgyNzY1NTM@._V1_FMjpg_UY2048_.jpg"
+      },
+      {
+         "id": 5,
+         "title": "Skyscraper",
+         "plot": "A security expert must infiltrate a burning skyscraper, 225 stories above ground, when his family is trapped inside by criminals.",
+         "imdb": 5.8,
+         "trailer": "https://www.youtube.com/embed/t9QePUT-Yt8",
+         "time": 102,
+         "year": 2018,
+         "genres": ["Disaster", "Action", "Adventure", "Thriller"],
+         "director": "Rawson Marshall Thurber",
+         "actors": ["Dwayne Johnson", "Neve Campbell", "Chin Han"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BNWYyYTExNWMtZGYyYy00YTEzLTg5MzEtY2YyMDI3MDNlMjcwXkEyXkFqcGc@._V1_FMjpg_UX790_.jpg"
+      },
+      {
+         "id": 6,
+         "title": "Beetlejuice",
+         "plot": "The spirits of a deceased couple are harassed by an unbearable family that has moved into their home, and hire a malicious spirit to drive them out.",
+         "imdb": 7.5,
+         "trailer": "https://www.youtube.com/embed/ickbVzajrk0",
+         "time": 92,
+         "year": 1988,
+         "genres": ["Dark Comedy", "Dark Fantasy", "Quirky Comedy", "Slapstick", "Supernatural Fantasy", "Comedy", "Fantasy"],
+         "director": "Tim Burton",
+         "actors": ["Alec Baldwin", "Geena Davis", "Michael Keaton"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BYjkwNzVlNDEtMTJlNy00OTdlLTljYWItM2RkZmZkYzY3YjM2XkEyXkFqcGc@._V1_FMjpg_UX1005_.jpg"
+      },
+      {
+         "id": 7,
+         "title": "Seventh Son",
+         "plot": "When Mother Malkin, the queen of evil witches, escapes the pit she was imprisoned in by professional monster hunter Spook decades ago and kills his apprentice, he recruits young Tom, the seventh son of the seventh son, to help him.",
+         "imdb": 5.5,
+         "trailer": "https://www.youtube.com/embed/5i90Qr0Qi6w",
+         "time": 102,
+         "year": 2014,
+         "genres": ["Dark Comedy", "Dark Fantasy", "Action", "Adventure", "Fantasy"],
+         "director": "Sergei Bodrov",
+         "actors": ["Ben Barnes", "Julianne Moore", "Jeff Bridges"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BMjAxNTg2MDkyN15BMl5BanBnXkFtZTgwNzA3NzY1MjE@._V1_FMjpg_UX790_.jpg"
+      },
+      {
+         "id": 8,
+         "title": "Memoirs of a Geisha",
+         "plot": "The heartwarming tale of Nitta Sayuri, a young Japanese woman who transcended from her fishing-village roots and became one of Japan's most celebrated geisha.",
+         "imdb": 7.3,
+         "trailer": "https://www.youtube.com/embed/4L-xlmakQvc",
+         "time": 145,
+         "year": 2005,
+         "genres": ["Period Drama", "Drama", "Romance"],
+         "director": "Rob Marshall",
+         "actors": ["Ziyi Zhang", "Ken Watanabe", "Michelle Yeoh"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BMTYxMzM4NTEzOV5BMl5BanBnXkFtZTcwNDMwNjQzMw@@._V1_FMjpg_UY2048_.jpg"
+      },
+      {
+         "id": 9,
+         "title": "Lords of Dogtown",
+         "plot": "The film follows the surf and skateboarding trends that originated in Venice, California during the 1970s.",
+         "imdb": 7.1,
+         "trailer": "https://www.youtube.com/embed/AUjR4G4yNpY",
+         "time": 107,
+         "year": 2005,
+         "genres": ["Docudrama", "Period Drama", "Extreme Sport", "Biography", "Drama", "Sport"],
+         "director": "Catherine Hardwicke",
+         "actors": ["Heath Ledger", "Emile Hirsch", "Victor Rasuk"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BZTQ2ODJlMDUtYTE3MC00MTc3LTliMDUtZTNkN2NjZTVhZjg3XkEyXkFqcGc@._V1_FMjpg_UX1009_.jpg"
+      },
+      {
+         "id": 10,
+         "title": "Lady Bird",
+         "plot": "A fiercely independent teenager tries to make her own way in the world while wanting to get out of her hometown of Sacramento, California, and to get away from her complicated mother and recently-unemployed father.",
+         "imdb": 7.4,
+         "trailer": "https://www.youtube.com/embed/cNi_HC839Wo",
+         "time": 94,
+         "year": 2017,
+         "genres": ["Coming-of-Age", "Quirky Comedy", "Teen Comedy", "Comedy", "Drama"],
+         "director": "Greta Gerwig",
+         "actors": ["Saoirse Ronan", "Laurie Metcalf", "Tracy Letts"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BNjk5MzcyOWQtNzE1Mi00NzdmLTlkM2QtOTdjZThhMDc2Y2NjXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg"
+      },
+      {
+         "id": 11,
+         "title": "The Florida Project",
+         "plot": "A single mother and the manager of a roadside motel do their utmost to maintain the innocence of a six-year-old girl's life.",
+         "imdb": 7.6,
+         "trailer": "https://www.youtube.com/embed/WwQ-NH1rRT4",
+         "time": 111,
+         "year": 2017,
+         "genres": ["Coming-of-Age", "Drama"],
+         "director": "Sean Baker",
+         "actors": ["Brooklynn Prince", "Bria Vinaite", "Willem Dafoe"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BNDBhM2MxYjAtMWFiYy00MWMwLThkMDYtN2M1ZWY3NjkxNGExXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg"
+      }
+   ]
+}
+ 
