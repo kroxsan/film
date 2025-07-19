@@ -2,20 +2,22 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Header from './components/Header';
 import PageContainer from './container/PageContainer'
 
+import './App.css'
+import Header from './components/Header' // ayrica headerda bootstaps kullandim JS ve CSS olarak
+
 function App() {
-  return (
-    <PageContainer>
+   return (
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+         <Header />
+         <PageContainer>
+            <Routes>
+               <Route path="/" element={<Home />} />
+            </Routes>
+         </PageContainer>
       </BrowserRouter>
-    </PageContainer>
-  );
+   );
 }
 
 export default App;

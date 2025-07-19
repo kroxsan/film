@@ -1,0 +1,68 @@
+body {
+   margin: 0;
+   padding: 0;
+}
+
+/*HEADER*/
+.header {
+   background-color: grey;
+   height: 73px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   height: 73px;
+   width: 73px;
+}
+
+/*COLLAPSE*/
+.custom-accordion {
+   font-size: 0.85rem;
+   max-width: 800px;
+   display: flex;
+   gap: 0.5rem;
+ }
+ 
+.custom-accordion .accordion-button {
+   padding: 0.25rem 0.5rem;
+   font-size: 0.85rem;
+   background-color: transparent;
+   color: white;
+   border-radius: 0.5rem !important;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) { /*acik olan itemler icin*/
+   background-color: transparent;
+   color: white;
+   box-shadow: none;
+   border-color: transparent;
+}
+
+.accordion .accordion-button:hover {
+   background-color: rgba(255,255,255,0.1);
+}
+
+.accordion-button::after {
+   filter: brightness(0) invert(1);
+   width: 1.5rem;
+   height: 1.5rem;
+} 
+
+
+.custom-accordion .accordion-body {
+   padding: 0.5rem;
+   font-size: 0.85rem;
+   background-color: transparent;
+   color: white;
+}
+
+.custom-accordion .accordion-item {
+   background-color: transparent;
+   border: none;
+   border-radius: 0.5rem !important; 
+   flex: 1;
+}
+

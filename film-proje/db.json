@@ -142,6 +142,58 @@
          "director": "Sean Baker",
          "actors": ["Brooklynn Prince", "Bria Vinaite", "Willem Dafoe"],
          "poster": "https://m.media-amazon.com/images/M/MV5BNDBhM2MxYjAtMWFiYy00MWMwLThkMDYtN2M1ZWY3NjkxNGExXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg"
+      },
+      {
+         "id": 12,
+         "title": "Warrior",
+         "plot": "The youngest son of an alcoholic former boxer returns home, where he's trained by his father for competition in a mixed martial arts tournament - a path that puts the fighter on a collision course with his estranged, older brother.",
+         "imdb": 8.1,
+         "trailer": "https://www.youtube.com/embed/I5kzcwcQA1Q",
+         "time": 140,
+         "year": 2011,
+         "genres": ["Boxing", "Action", "Drama", "Sport"],
+         "director": "Gavin O'Connor",
+         "actors": ["Tom Hardy", "Nick Nolte", "Joel Edgerton"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BMTk4ODk5MTMyNV5BMl5BanBnXkFtZTcwMDMyNTg0Ng@@._V1_FMjpg_UY2048_.jpg"
+      },
+      {
+         "id": 13,
+         "title": "Acts of Violence",
+         "plot": "When a bride-to-be is kidnapped by human traffickers, her fiancé and his ex-military brothers embark on a violent rescue mission, teaming up with a cop investigating the same crime ring.",
+         "imdb": 5.3,
+         "trailer": "https://www.youtube.com/embed/j3fL63AKrmU",
+         "time": 86,
+         "year": 2018,
+         "genres": ["Caper", "Conspiracy Thriller", "Action", "Crime", "Thriller"],
+         "director": "Brett Donowho",
+         "actors": ["Bruce Willis", "Cole Hauser", "Shawn Ashmore"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BMjM3NzI1NDMyNl5BMl5BanBnXkFtZTgwNzUyMDgzNDM@._V1_FMjpg_UX1012_.jpg"
+      },
+      {
+         "id": 14,
+         "title": "Saving Face",
+         "plot": "A gay Chinese-American and her traditionalist mother are reluctant to go public with secret loves that clash against cultural expectations.",
+         "imdb": 7.4,
+         "trailer": "https://www.youtube.com/embed/78h8WeP3Oas",
+         "time": 91,
+         "year": 2004,
+         "genres": ["Romantic Comedy", "Comedy", "Drama", "Romance"],
+         "director": "Alice Wu",
+         "actors": ["Joan Chen", "Michelle Krusiec", "Lynn Chen"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BZTc4YzA2MDgtYWZhMC00ZDZjLWFiNjgtNzYzNDY1Y2M3ZjhhXkEyXkFqcGc@._V1_FMjpg_UX996_.jpg"
+      },
+      {
+         "id": 15,
+         "title": "88 Minutes",
+         "plot": "On the day that a serial killer that he helped put away is supposed to be executed, a noted forensic psychologist and college professor receives a call informing him that he has 88 minutes left to live.",
+         "imdb": 5.9,
+         "trailer": "https://www.youtube.com/embed/HUeFLCwDa_c",
+         "time": 108,
+         "year": 2007,
+         "genres": ["Serial Killer", "Crime", "Drama", "Mystery", "Thriller"],
+         "director": "Jon Avnet",
+         "actors": ["Al Pacino", "Alicia Witt", "Ben McKenzie"],
+         "poster": "https://m.media-amazon.com/images/M/MV5BMTgxOTg1NzgzMV5BMl5BanBnXkFtZTcwNTM3Mjc1MQ@@._V1_FMjpg_UX510_.jpg"
       }
    ]
 }
