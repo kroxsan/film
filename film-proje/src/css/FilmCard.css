@@ -4,9 +4,6 @@
   margin: 1rem;
   perspective: 1000px;
   cursor: pointer;
-  
-  
-  
 }
 
 .card-inner {
@@ -15,7 +12,6 @@
   height: 100%;
   transition: transform 0.75s;
   transform-style: preserve-3d;
-  
 }
 
 .card:hover .card-inner {
@@ -24,24 +20,90 @@
 
 .card-front,
 .card-back {
-  
   border: none;
   box-shadow: none;
   background: transparent; 
   backface-visibility: hidden;
-  
-  
 }
 
 .card-front {
   z-index: 2;
   position: absolute;
-  
-  
 }
 
 .card-back {
   transform: rotateY(180deg);
   z-index: 1;
   position: relative;
+}
+
+/* trailer button (var olanın devamı, seninle uyumlu şekilde) */
+.trailer-btn {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #777;
+  font-size: 1.75em;
+  overflow: hidden;
+}
+
+.trailer-btn:hover {
+  width: 180px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+  color: white;
+  background: linear-gradient(45deg, #FF9966, #FF5E62);
+}
+
+.trailer-btn ion-icon {
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+.trailer-btn:hover ion-icon {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+
+.trailer-btn .title {
+  position: absolute;
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+  left: 70px;
+  user-select: none;
+}
+
+.trailer-btn:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+
+.trailer-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.trailer-container iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
 }
