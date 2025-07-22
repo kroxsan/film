@@ -3,7 +3,7 @@ body {
    padding: 0;
 }
 
-/*HEADER*/
+/* HEADER */
 .header {
    background-color: grey;
    height: 73px;
@@ -18,13 +18,13 @@ body {
    width: 73px;
 }
 
-/*COLLAPSE*/
+/* COLLAPSE */
 .custom-accordion {
    font-size: 0.85rem;
    max-width: 800px;
    display: flex;
    gap: 0.5rem;
- }
+}
  
 .custom-accordion .accordion-button {
    padding: 0.25rem 0.5rem;
@@ -34,7 +34,7 @@ body {
    border-radius: 0.5rem !important;
 }
 
-.custom-accordion .accordion-button:not(.collapsed) { /*acik olan itemler icin*/
+.custom-accordion .accordion-button:not(.collapsed) { /* açık olan item */
    background-color: transparent;
    color: white;
    box-shadow: none;
@@ -51,7 +51,6 @@ body {
    height: 1.5rem;
 } 
 
-
 .custom-accordion .accordion-body {
    padding: 0.5rem;
    font-size: 0.85rem;
@@ -59,12 +58,25 @@ body {
    color: white;
 }
 
+/* Accordion kapalıyken bile daha geniş görünmesi için */
 .custom-accordion .accordion-item {
    background-color: transparent;
    border: none;
    border-radius: 0.5rem !important; 
    flex: 1;
+   min-height: 50px; /* kapalıyken biraz yüksek */
+   min-width: 270px;
 }
 
+.custom-accordion .accordion-collapse {
+   overflow: hidden;
+   transition: height 0.3s ease, min-height 0.3s ease;
+}
 
+.custom-accordion .accordion-collapse.collapse {
+   min-height: 50px; /* kapalıyken yüksek */
+}
 
+.custom-accordion .accordion-collapse.collapse.show {
+   min-height: auto; /* açıkken içerik kadar */
+}

@@ -1,17 +1,26 @@
-// src/pages/Home.jsx
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFilms } from '../redux/slices/movieSlice';
 import FilmCard from '../components/FilmCard';
-import { Box } from '@mui/material';
+import { Box, CircularProgress, Typography } from '@mui/material';
 
 const Home = () => {
-  const [films, setFilms] = useState([]);
+  const dispatch = useDispatch();
+  const { items: films, status, error } = useSelector(state => state.movie);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/movies')
-      .then(res => setFilms(res.data))
-      .catch(err => console.error(err));
-  }, []);
+    if (status === 'idle') {
+      dispatch(fetchFilms());
+    }
+  }, [status, dispatch]);
+
+  if (status === 'loading') {
+    return <Box textAlign="center"><CircularProgress /></Box>;
+  }
+
+  if (status === 'failed') {
+    return <Typography color="error">Error: {error}</Typography>;
+  }
 
   return (
     <Box display="flex" flexWrap="wrap" justifyContent="center" p={3}>

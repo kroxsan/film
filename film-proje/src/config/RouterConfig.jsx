@@ -1,23 +1,20 @@
-import { createBrowserRouter } from 'react-router-dom';
-import App from './App';
-import Home from './pages/Home';
-import FilmDetails from './pages/FilmDetails'; // yeni sayfayı import et
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from '../pages/Home'
+import FilmDetails from '../pages/FilmDetails'
+import SearchedMovies from '../pages/SearchedMovies'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: 'film-details/:id', // dinamik film detay rotası
-        element: <FilmDetails />,
-      }
-    ]
-  }
-]);
 
-export default router;
+function RouterConfig() {
+   return (
+      <div>
+         <Routes>
+            <Route path='/' element = {<Home/>}/>
+            <Route path='/film-details/:id' element = {<FilmDetails/>}/>
+            <Route path='/search' element = {<SearchedMovies/>}/>
+         </Routes>
+      </div>
+   )
+}
+
+export default RouterConfig
