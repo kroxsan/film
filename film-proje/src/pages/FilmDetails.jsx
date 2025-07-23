@@ -1,12 +1,19 @@
+// pages/FilmDetails.jsx
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import { Typography, Box, CircularProgress, Button } from '@mui/material';
-import '../css/FilmCard.css';
-import { FaPlay } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { addToWatchLater } from '../redux/slices/watchLaterSlice';
 import { PiFilmSlateDuotone } from "react-icons/pi";
+import axios from 'axios';
+
+import '../css/FilmCard.css';
+
+import { Typography, Box, Button } from '@mui/material';
+import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
+import { FaPlay } from "react-icons/fa";
+
+// Global Loading bileşeni
+import Loading from '../components/Loading';
 
 const FilmDetails = () => {
   const { id } = useParams();
@@ -23,7 +30,7 @@ const FilmDetails = () => {
       .finally(() => setLoading(false));
   }, [id]);
 
-  // Body arka plan rengini sadece FilmDetails açıkken değiştiriyoruz
+  // Body arkaplan rengini geçici olarak değiştir
   useEffect(() => {
     const originalBg = document.body.style.backgroundColor;
     document.body.style.backgroundColor = '#2c2c2c';
@@ -41,52 +48,42 @@ const FilmDetails = () => {
   };
 
   if (loading) {
-    return (
-      <Box display="flex" justifyContent="center" mt={5}>
-        <CircularProgress />
-      </Box>
-    );
+    return <Loading />;
   }
 
   if (!film) {
-    return <Typography align="center" mt={5}>Film not found.</Typography>;
+    return (
+      <Typography align="center" mt={5}>
+        Film not found.
+      </Typography>
+    );
   }
 
   const hours = Math.floor(film.time / 60);
   const minutes = film.time % 60;
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "#2c2c2c",
-        minHeight: "100vh",
-        
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "start",
-        paddingTop: "2rem"
-      }}
-    >
+    <Box sx={{ minHeight: "100vh", backgroundColor: "#2c2c2c", padding: "2rem", margin: '103px auto 0 auto' }}>
       <Box
-        style={{
+        sx={{
           background: "#444",
-          width: "1200px",
+          maxWidth: "1200px",
+          margin: "0 auto",
           borderRadius: '8px',
           padding: '2rem'
         }}
       >
         {/* Poster ve Bilgiler */}
-        <Box sx={{ height: '750px', alignItems: 'start' }} display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={4}>
+        <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={4}>
           {/* Poster */}
           <Box
             sx={{
-              maxHeight: '100%',
               width: { xs: '100%', md: '40%' },
               maxWidth: '400px',
               aspectRatio: '2 / 3',
               borderRadius: '8px',
               overflow: 'hidden',
-              flexShrink: 0
+              flexShrink: 0,
             }}
           >
             <img
@@ -102,13 +99,22 @@ const FilmDetails = () => {
           </Box>
 
           {/* Bilgi Alanı */}
-          <Box sx={{ color: "white" }} display="flex" flexDirection="column" flex={1}>
-            <Typography variant="h4" gutterBottom>{film.title}</Typography>
-            <Typography variant="body1"><strong>Year:</strong> {film.year}</Typography>
-            <Typography variant="body1"><strong>IMDb Rating:</strong> {film.imdb ?? 'N/A'}</Typography>
-            <Typography variant="body1" mt={2}><strong>Plot:</strong> {film.plot}</Typography>
+          <Box display="flex" flexDirection="column" flex={1} color="white">
+            <Typography variant="h4" gutterBottom>
+              {film.title}
+            </Typography>
+            <Typography variant="body1">
+              <strong>Year:</strong> {film.year}
+            </Typography>
+            <Typography variant="body1">
+              <strong>IMDb Rating:</strong> {film.imdb ?? 'N/A'}
+            </Typography>
             <Typography variant="body1" mt={2}>
-              <strong>Time:</strong> {hours > 0 ? `${hours} saat ` : ''}{minutes} dakika
+              <strong>Plot:</strong> {film.plot}
+            </Typography>
+            <Typography variant="body1" mt={2}>
+              <strong>Time:</strong> {hours > 0 ? `${hours} saat ` : ''}
+              {minutes} dakika
             </Typography>
             <Typography variant="body1" mt={2}>
               <strong>Genres:</strong> {film.genres.join(', ')}
@@ -124,12 +130,12 @@ const FilmDetails = () => {
             <Box mt={4} display="flex" alignItems="center" gap="30px">
               <button className="trailer-btn" onClick={scrollToTrailer}>
                 <FaPlay style={{ fontSize: '20px' }} />
-                <span className="title"></span>
+                <span className="title">Go to Trailer</span>
               </button>
               <button className="trailer-btn" onClick={() => dispatch(addToWatchLater(film))}>
               <PiFilmSlateDuotone style={{ fontSize: '20px' }}  />
             
-             <span className="title"></span>
+             <span className="title">Watch Later</span>
             </button>
             </Box>
           </Box>
@@ -143,9 +149,10 @@ const FilmDetails = () => {
         >
           <iframe
             src={film.trailer}
-            title="Film Fragmanı"
+            title={`${film.title} Trailer`}
             frameBorder="0"
             allowFullScreen
+            style={{ width: '100%', height: '500px' }}
           ></iframe>
         </Box>
       </Box>

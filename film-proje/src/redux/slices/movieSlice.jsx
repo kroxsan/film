@@ -13,7 +13,7 @@ export const fetchFilms = createAsyncThunk(
 );
 
 const filmsSlice = createSlice({
-  name: 'films',
+  name: 'movie',
   initialState: {
     items: [],
     status: 'idle', // idle | loading | succeeded | failed

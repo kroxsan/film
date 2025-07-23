@@ -45,7 +45,7 @@ const Carousel = () => {
   };
 
   return (
-    <Box sx={{ position: 'relative', mt: 4, mb: 4, width: '100%', overflow: 'hidden' }}>
+    <Box sx={{ position: 'relative', mt: 4, mb: 4, width: '100%', overflow: 'hidden', backgroundColor: '#212529', margin: '103px auto 0 auto', boxShadow: '0 0 33px rgba(255, 60, 60, 0.4)' }}>
       <IconButton
         onClick={scrollLeft}
         sx={{
@@ -64,31 +64,31 @@ const Carousel = () => {
       </IconButton>
 
       <Box
-        ref={scrollRef}
-        sx={{
-          display: 'flex',
-          overflowX: 'auto',
-          scrollBehavior: 'smooth',
-          gap: 2,
-          px: 3,
-          py: 1,
-          scrollSnapType: 'x mandatory',
-          '&::-webkit-scrollbar': { display: 'none' },
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
-        }}
+         ref={scrollRef}
+         sx={{
+            display: 'flex',
+            overflowX: 'auto',
+            scrollBehavior: 'smooth',
+            gap: 2,
+            px: 3,
+            py: 1,
+            scrollSnapType: 'x mandatory',
+            '&::-webkit-scrollbar': { display: 'none' },
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+         }}
       >
-        {topRatedFilms.map(film => (
-          <Box
-            key={film.id}
-            sx={{
-              flex: `0 0 calc((100% - ${(cardsPerView - 1) * 16}px) / ${cardsPerView})`,
-              scrollSnapAlign: 'start',
-            }}
-          >
-            <FilmCardCarousel film={film} />
-          </Box>
-        ))}
+         {topRatedFilms.map(film => (
+            <Box
+               key={film.id}
+               sx={{
+               flex: `0 0 calc((100% - ${(cardsPerView - 1) * 16}px) / ${cardsPerView})`,
+               scrollSnapAlign: 'start',
+               }}
+            >
+               <FilmCardCarousel film={film} />
+            </Box>
+         ))}
       </Box>
 
       <IconButton

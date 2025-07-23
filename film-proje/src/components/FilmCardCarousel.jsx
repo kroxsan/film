@@ -13,7 +13,7 @@ const FilmCardCarousel = ({ film }) => {
     <Link to={`/film-details/${film.id}`} style={{ textDecoration: 'none', cursor: 'pointer' }}>
       <div
         className="card"
-        style={{ width: cardWidth, height: cardHeight, cursor: 'pointer' }}
+        style={{ width: cardWidth, height: cardHeight, cursor: 'pointer', border: 'none' }}
         onClick={(e) => e.stopPropagation()} // sadece link tıklaması aktif, hover yok
       >
         <div className="card-inner" style={{ transform: 'none' /* hover flip kapalı */ }}>

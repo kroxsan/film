@@ -3,16 +3,20 @@ body {
    padding: 0;
 }
 
-
-
 /* HEADER */
 .header {
    background-color: grey;
-   height: 73px;
+   height: 83px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
+
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
 }
 
 .logo {
@@ -21,6 +25,13 @@ body {
 }
 
 /* COLLAPSE */
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  border-color: transparent; /* İstersen */
+  box-shadow: none;
+  background-color: transparent; /* mavi olmasın */
+}
+
 .custom-accordion {
    font-size: 0.85rem;
    max-width: 800px;
@@ -67,7 +78,7 @@ body {
    border-radius: 0.5rem !important; 
    flex: 1;
    min-height: 50px; /* kapalıyken biraz yüksek */
-   min-width: 270px;
+   min-width: auto;
 }
 
 .custom-accordion .accordion-collapse {
@@ -81,4 +92,51 @@ body {
 
 .custom-accordion .accordion-collapse.collapse.show {
    min-height: auto; /* açıkken içerik kadar */
+}
+
+.collapse-content {
+   display: flex;
+   align-items: flex-start;
+   gap: 1rem;
+}
+ 
+.accordion-wrapper {
+   flex: 1;
+   min-width: 0;
+}
+
+.filter-button-wrapper {
+   display: flex;
+   align-items: center;
+   height: 40px;
+}
+
+.filter-button {
+   height: 100%;
+   padding: 0 16px;
+   white-space: nowrap;
+   cursor: pointer;
+   border-radius: 4px;
+   border: none;
+   background-color: rgb(255, 208, 0);
+   color: whitesmoke;
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+.filter-button:hover {
+   background-color: darkred;
+}
+
+.accordion-button {
+   font-size: large;
+}
+
+.text-white {
+   margin-right: 47px;
+}
+
+.navbar-toggler-icon:hover {
+   background-color: rgba(187, 187, 187, 0.576);
+   border-radius: 3px;
 }
