@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchFilms } from '../redux/slices/movieSlice';
 import FilmCard from '../components/FilmCard';
 import { Box, CircularProgress, Typography } from '@mui/material';
+import Carousel from '../components/Carousel';
+
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -23,11 +25,14 @@ const Home = () => {
   }
 
   return (
+    <div>
+    <Carousel />    
     <Box display="flex" flexWrap="wrap" justifyContent="center" p={3}>
       {films.map(film => (
         <FilmCard key={film.id} film={film} />
       ))}
     </Box>
+    </div>
   );
 };
 

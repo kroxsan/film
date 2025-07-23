@@ -11,6 +11,9 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import { BiFilm } from "react-icons/bi";
+import { IconButton } from '@mui/material';
+
 
 function Header() {
 
@@ -134,6 +137,14 @@ function Header() {
                   onChange={(e) => setSearchValue(e.target.value)}
                   onKeyDown={handleSearch}
                />
+
+               <IconButton
+               onClick={() => navigate('/watchlist')}
+               sx={{ color: 'white', marginRight: '1rem' }}
+               >
+               <BiFilm />
+               </IconButton>
+
 
                <button
                   className="navbar-toggler navbar-dark mx-4"
@@ -335,7 +346,7 @@ function Header() {
                                  name="customized-10"
                                  value={rating}
                                  max={10}
-                                 precision={0.5}  // yarım adımlar
+                                 precision={0.5}
                                  onChange={(event, newValue) => {
                                     setRating(newValue);
                                  }}
