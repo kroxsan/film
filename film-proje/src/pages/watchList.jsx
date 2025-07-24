@@ -23,7 +23,7 @@ function WatchList() {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: '#2c2c2c', padding: '2rem', margin: '83px auto 0 auto' }}>
+    <Box sx={{ minHeight: '100vh', backgroundColor: '#2c2c2c', padding: '2rem' }}>
       <Typography
         variant="h4"
         color="white"
@@ -55,7 +55,7 @@ function WatchList() {
       )}
 
       {watchList.length === 0 ? (
-        <Typography color="white" textAlign="center">
+        <Typography color="grey" textAlign="center">
           List is empty.
         </Typography>
       ) : (

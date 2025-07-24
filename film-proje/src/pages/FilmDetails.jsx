@@ -1,4 +1,3 @@
-// pages/FilmDetails.jsx
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -63,7 +62,7 @@ const FilmDetails = () => {
   const minutes = film.time % 60;
 
   return (
-    <Box sx={{ minHeight: "100vh", backgroundColor: "#2c2c2c", padding: "2rem", margin: '103px auto 0 auto' }}>
+    <Box sx={{ minHeight: "100vh", backgroundColor: "#2c2c2c", padding: "2rem" }}>
       <Box
         sx={{
           background: "#444",

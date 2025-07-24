@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilters, applyFilters } from '../redux/slices/filterSlice';
@@ -57,6 +57,9 @@ const StyledSelect = styled(Select)(({ theme }) => ({
 function Header() {
    const navigate = useNavigate();
    const dispatch = useDispatch();
+   const collapseRef = useRef(null);
+   const headerRef = useRef(null);
+
 
    // guncel genrelari al
    const allGenres = useSelector(state => state.filter.allGenres);
@@ -109,10 +112,39 @@ function Header() {
       }
    };
 
+   // collapsin kapanmasi (outside click))
+   useEffect(() => {
+      const handleClickOutside = (event) => {
+        const collapseElement = document.getElementById('navbarToggleExternalContent');
+    
+        // Eğer collapse açık değilse hiçbir şey yapma
+        if (!collapseElement?.classList.contains('show')) return;
+    
+        // Eğer tıklanan yer header veya collapse içindeyse hiçbir şey yapma
+        if (
+          collapseRef.current?.contains(event.target) ||
+          headerRef.current?.contains(event.target)
+        ) {
+          return;
+        }
+    
+        // Dışarı tıklanmışsa collapse'i kapat
+        const bsCollapse = Collapse.getOrCreateInstance(collapseElement);
+        bsCollapse.hide();
+      };
+    
+      document.addEventListener('mousedown', handleClickOutside);
+    
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, []);
+    
+
   return (
     <div>
       {/* Header */}
-      <div className="header d-flex align-items-center bg-dark p-2">
+      <div className="header d-flex align-items-center bg-dark p-2" ref={headerRef}>
         <div onClick={() => navigate('/')} style={{ cursor: "pointer", display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
           <img className="logo" src={logo} alt="logo" />
           <h3 style={{marginTop: '13px', color: 'rgb(255, 208, 0)'}}>CinePop</h3>
@@ -152,22 +184,27 @@ function Header() {
             </Badge>
           </IconButton>
 
-          <button
-            className="navbar-toggler navbar-dark mx-4"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+            {/*HAMBURGER ICON*/}
+            <button
+               className="navbar-toggler navbar-dark mx-4"
+               type="button"
+               onClick={() => {
+                  const collapseElement = document.getElementById('navbarToggleExternalContent');
+                  if (collapseElement) {
+                     const bsCollapse = Collapse.getOrCreateInstance(collapseElement);
+                     bsCollapse.toggle(); // tıklanınca aç/kapat
+                  }
+               }}
+               aria-label="Toggle navigation"
+               >
+               <span className="navbar-toggler-icon"></span>
+            </button>
+
         </div>
       </div>
 
       {/* Collapse Content */}
-      <div className="collapse" id="navbarToggleExternalContent" style={{margin: '73px auto 0 auto'}}>
+      <div className="collapse" id="navbarToggleExternalContent" ref={collapseRef}>
         <div className="bg-dark p-4 collapse-content">
 
           {/*Accordion*/}

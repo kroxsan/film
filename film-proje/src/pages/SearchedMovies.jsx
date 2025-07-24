@@ -27,13 +27,13 @@ const SearchedMovies = () => {
    }, []);
 
    return (
-      <Box display="flex" flexWrap="wrap" justifyContent="center" p={3} sx={{margin: '103px auto 0 auto'}}>
+      <Box display="flex" flexWrap="wrap" justifyContent="center" p={3}>
          {filteredFilms.length > 0 ? (
          filteredFilms.map(film => (
             <FilmCard key={film.id} film={film} />
          ))
          ) : (
-         <p style={{ color: 'black' }}>No movies found for <strong>{query}</strong></p>
+         <p style={{ color: 'grey' }}>No movies found for <strong>{query}</strong></p>
          )}
       </Box>
    );

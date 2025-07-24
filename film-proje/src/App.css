@@ -1,6 +1,6 @@
 body {
    margin: 0;
-   padding: 0;
+   padding-top: 83px;
 }
 
 /* HEADER */
@@ -99,6 +99,16 @@ body {
    align-items: flex-start;
    gap: 1rem;
 }
+
+/* collapse default olarak gizli, ama açıldığında içerik kadar yer kaplayacak */
+.collapse:not(.show) {
+   display: none;
+}
+
+.collapse.show {
+   display: block;
+}
+
  
 .accordion-wrapper {
    flex: 1;

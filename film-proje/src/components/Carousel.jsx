@@ -45,8 +45,17 @@ const Carousel = () => {
   };
 
   return (
-    <Box sx={{ position: 'relative', mt: 4, mb: 4, width: '100%', overflow: 'hidden', backgroundColor: '#212529', margin: '103px auto 0 auto', boxShadow: '0 0 33px rgba(255, 60, 60, 0.4)' }}>
-      
+    <Box
+      sx={{
+        position: 'relative',
+        mt: 4,
+        mb: 4,
+        width: '100%',
+        overflow: 'hidden',
+        backgroundColor: '#212529',
+        boxShadow: '0 0 33px rgba(255, 60, 60, 0.4)'
+      }}
+    >
       {/* Sol yön butonu */}
       <IconButton
         onClick={scrollLeft}
@@ -73,6 +82,7 @@ const Carousel = () => {
         <ChevronLeft />
       </IconButton>
 
+      {/* Scrollable film listesi */}
       <Box
         ref={scrollRef}
         sx={{
@@ -94,6 +104,10 @@ const Carousel = () => {
             sx={{
               flex: `0 0 calc((100% - ${(cardsPerView - 1) * 16}px) / ${cardsPerView})`,
               scrollSnapAlign: 'start',
+              '&:hover': {
+                transform: 'translateY(-5px)',
+                transition: 'transform 0.35s ease',
+              },
             }}
           >
             <FilmCardCarousel film={film} />

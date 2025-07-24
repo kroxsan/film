@@ -18,11 +18,11 @@ function FilteredMovies() {
   const filteredMovies = useSelector(state => state.filter.filteredMovies);
 
    if (filteredMovies.length === 0) {
-      return <div style={{fontSize: '19px', marginTop: '200px', marginLeft: '53px'}}>No movies found.</div>;
+      return <div style={{fontSize: '19px', textAlign:'center', color: 'grey', padding: '24px', margin: '103px auto 0 auto'}}>No movies found.</div>;
   }
 
    return (
-      <div style={{margin: '103px auto 0 auto'}}>
+      <div>
          <Box display="flex" flexWrap="wrap" justifyContent="center" p={3}>
             {filteredMovies.map(movie => (
                <FilmCard key={movie.id} film={movie} />
