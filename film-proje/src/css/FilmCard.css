@@ -39,7 +39,7 @@
   position: relative;
 }
 
-/* trailer button (var olanın devamı, seninle uyumlu şekilde) */
+/* trailer button */
 .trailer-btn {
   position: relative;
   list-style: none;
@@ -49,9 +49,6 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 60px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: 0.5s;
   border: none;
   outline: none;
@@ -60,43 +57,50 @@
   color: #777;
   font-size: 1.75em;
   overflow: hidden;
-  gap: 8px
+  
 }
 
-.trailer-btn:hover {
-   width: 180px;
-   box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
-   color: white;
-   background: linear-gradient(45deg, #FF9966, #FF5E62);
-   justify-content: flex-start;
-   gap: 10px;
-   padding-left: 20px;
-}
-
+.trailer-btn svg,
 .trailer-btn ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: 0.5s;
   transition-delay: 0.25s;
 }
 
+.trailer-btn:hover svg,
 .trailer-btn:hover ion-icon {
   transform: scale(0);
   transition-delay: 0s;
 }
 
+.trailer-btn:hover {
+  width: 180px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+  background: linear-gradient(45deg, #FF9966, #FF5E62);
+  color: white;
+  padding-left: 20px;
+}
+
 .trailer-btn .title {
-   opacity: 0;
-   width: 0;
-   transition: all 0.3s ease;
-   white-space: nowrap;
-   overflow: hidden;
-   color: white;
-   font-size: 0.7em;
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  color: white;
+  font-size: 0.7em;
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .trailer-btn:hover .title {
-   opacity: 1;
-   transform: scale(1);
-   width: auto;
+  opacity: 1;
+  width: auto;
 }
 
 .trailer-container {

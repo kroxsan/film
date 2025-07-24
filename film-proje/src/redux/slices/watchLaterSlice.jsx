@@ -27,10 +27,15 @@ export const watchLaterSlice = createSlice({
     removeFromWatchLater: (state, action) => {
       state.list = state.list.filter(item => item.id !== action.payload);
       writeWatchListToStorage(state.list);
+    },
+    clearWatchLater: (state) => {
+    state.list = [];
+    writeWatchListToStorage(state.list);
     }
+
   }
 });
 
-export const { addToWatchLater, removeFromWatchLater } = watchLaterSlice.actions;
+export const { addToWatchLater, removeFromWatchLater, clearWatchLater } = watchLaterSlice.actions;
 
 export default watchLaterSlice.reducer;
